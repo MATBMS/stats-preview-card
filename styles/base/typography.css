@@ -1,0 +1,75 @@
+/* ──────────────────────────────────────────
+   Typography
+   Loads page fonts from local files and exposes
+   the text presets defined in the style guide.
+   ────────────────────────────────────────── */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../../fonts/inter/Inter_18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../../fonts/inter/Inter_18pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../../fonts/lexend-deca/LexendDeca-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Page-wide default = Text Preset 4 (body copy) */
+body {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-preset-4);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-preset-4);
+  color: var(--color-white-75);
+}
+
+.text-preset-1 {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-preset-1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-preset-1);
+}
+
+.text-preset-2 {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-preset-2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-preset-2);
+}
+
+.text-preset-3 {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-preset-3);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-preset-3);
+}
+
+.text-preset-4 {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-preset-4);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-preset-4);
+}
+
+.text-preset-5 {
+  font-family: var(--font-family-lexend-deca);
+  font-size: var(--font-size-preset-5);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-preset-5);
+  letter-spacing: var(--letter-spacing-preset-5);
+  text-transform: uppercase;
+}
