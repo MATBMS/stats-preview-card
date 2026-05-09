@@ -10,15 +10,41 @@
   <title>Stats preview card</title>
 </head>
 <body>
+  <main class="page">
+    <article class="card">
+      <picture class="card__image">
+        <source
+          media="(min-width: 56rem)"
+          srcset="./images/image-header-desktop.jpg">
+        <img src="./images/image-header-mobile.jpg" alt="">
+      </picture>
 
-  Get insights that help your business grow.
+      <div class="card__content">
+        <h1 class="card__title text-preset-2">
+          Get <span class="card__title-accent">insights</span> that help your business grow.
+        </h1>
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
+        <p class="card__description">
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer
+          experience, and overall efficiency.
+        </p>
 
-  10k+ companies
-  314 templates
-  12m+ queries
-
+        <ul class="stats" role="list">
+          <li class="stat">
+            <p class="stat__value text-preset-3">10k+</p>
+            <p class="stat__label text-preset-5">Companies</p>
+          </li>
+          <li class="stat">
+            <p class="stat__value text-preset-3">314</p>
+            <p class="stat__label text-preset-5">Templates</p>
+          </li>
+          <li class="stat">
+            <p class="stat__value text-preset-3">12M+</p>
+            <p class="stat__label text-preset-5">Queries</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </main>
 </body>
 </html>
