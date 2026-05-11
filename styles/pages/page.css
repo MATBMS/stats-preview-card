@@ -1,7 +1,8 @@
 /* ──────────────────────────────────────────
    Stats preview card page
-   Mobile-first; flips to a side-by-side card
-   layout at 56rem (≈ 896px).
+   Mobile-first; widens to a tablet layout at
+   40rem and flips to a side-by-side card layout
+   at 56rem (≈ 896px).
    ────────────────────────────────────────── */
 
 body {
@@ -61,11 +62,17 @@ body {
 
 /* ── Stats ────────────────────────────────── */
 .stats {
-  list-style: none;
   margin-top: var(--spacing-500);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-400);
+}
+
+/* Source order is <dt> (label) then <dd> (value) for semantics;
+   column-reverse flips the visual stack so the value reads on top. */
+.stat {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .stat__value {
@@ -77,11 +84,55 @@ body {
 }
 
 /* ──────────────────────────────────────────
+   Tablet layout
+   Still vertical (image on top), but wider card,
+   left-aligned text, larger title, horizontal stats.
+   ────────────────────────────────────────── */
+@media (min-width: 40rem) {
+  .card {
+    max-width: 564px;
+    text-align: left;
+  }
+
+  .card__image {
+    aspect-ratio: 564 / 442;
+  }
+
+  .card__content {
+    padding: var(--spacing-800) var(--spacing-1000);
+  }
+
+  .card__title {
+    font-size: var(--font-size-preset-1);
+    line-height: var(--line-height-preset-1);
+  }
+
+  /* Matches the Figma Text Block — caps the content at 403.5px so the
+     title wraps the same way no matter how wide the card grows. */
+  .card__title,
+  .stats {
+    max-width: 403.5px;
+  }
+
+  .card__description {
+    margin-top: var(--spacing-300);
+    /* Wraps earlier than the title — matches the Figma spec. */
+    max-width: 374px;
+  }
+
+  .stats {
+    margin-top: var(--spacing-900);
+    flex-direction: row;
+    gap: var(--spacing-800);
+  }
+}
+
+/* ──────────────────────────────────────────
    Desktop layout
    ────────────────────────────────────────── */
 @media (min-width: 56rem) {
   .card {
-    max-width: 1110px;
+    max-width: 1128px;
     flex-direction: row-reverse;
     text-align: left;
   }
@@ -97,7 +148,7 @@ body {
   }
 
   .card__content {
-    padding: var(--spacing-800) var(--spacing-900);
+    padding: var(--spacing-800) var(--spacing-1000);
   }
 
   .card__title {

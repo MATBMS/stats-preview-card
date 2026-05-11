@@ -40,3 +40,17 @@ I need to be able to [...],<br>
 So that I can [...].
 
 ### What I learned
+
+#### Description List
+
+```html
+<dl class="stats">
+  <div class="stat">
+    <dt class="stat__label">Companies</dt>
+    <dd class="stat__value">10k+</dd>
+  </div>
+  ...
+</dl>
+```
+
+I learned to use a `<dl>` (description list) to mark up name-value pairs like the stats on this card. `<dt>` holds the term (the label) and `<dd>` holds its value, which is more semantic than a generic `<ul>` of paragraphs and helps assistive tech announce the pairing correctly.
