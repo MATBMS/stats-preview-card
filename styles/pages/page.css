@@ -40,6 +40,19 @@ body {
   opacity: 0.75;
 }
 
+/* Hover affordance — fine-pointer devices only, so a tap on touch
+   doesn't leave the card stuck in a lifted state. */
+@media (hover: hover) and (pointer: fine) {
+  .card {
+    transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px 0 var(--color-purple-500-30);
+  }
+}
+
 /* ── Content ──────────────────────────────── */
 .card__content {
   padding: var(--spacing-400);

@@ -36,8 +36,8 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 ### Extra feature
 
 As a User,<br>
-I need to be able to [...],<br>
-So that I can [...].
+I need to be able to see the stats card lift with a soft purple shadow when I hover it on a desktop,<br>
+So that I can feel the interface acknowledging my pointer and perceive the card as a polished UI element.
 
 ### What I learned
 
